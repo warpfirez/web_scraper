@@ -215,8 +215,8 @@ return $default(_that.id,_that.title,_that.company,_that.location,_that.descript
 /// @nodoc
 @JsonSerializable()
 
-class _JobModel implements JobModel {
-  const _JobModel({required this.id, required this.title, required this.company, required this.location, required this.description, this.minSalary, this.maxSalary, this.somethingTest = false});
+class _JobModel extends JobModel {
+  const _JobModel({required this.id, required this.title, required this.company, required this.location, required this.description, this.minSalary, this.maxSalary, this.somethingTest = false}): super._();
   factory _JobModel.fromJson(Map<String, dynamic> json) => _$JobModelFromJson(json);
 
 @override final  String id;

@@ -5,6 +5,7 @@ class FetchJobs {
   final JobRepository repository;
 
   FetchJobs(this.repository);
+  
   Future<List<Job>> call() async {
     return await repository.fetchJobs();
   }
